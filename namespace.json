@@ -1,1 +1,1 @@
-{"name": "metagenomics", "namespace_id": "ef51838c-012c-44de-9428-9de19c5157f9"}
+{"name": "default", "namespace_id": "default", "volumes": "{\n    \"/data\": {\n        \"bind\": \"/data\",\n        \"mode\": \"rw\"\n    }, \"/data2\": {\n        \"bind\": \"/data2\",\n        \"mode\": \"rw\"\n    }\n}"}
