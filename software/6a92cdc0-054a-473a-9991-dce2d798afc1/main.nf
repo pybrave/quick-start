@@ -13,8 +13,7 @@ process FASTQC {
 
     script:
     """
-    mv ${reads[0]} ${meta.id}_1.fastq.gz
-    mv ${reads[1]} ${meta.id}_2.fastq.gz
+
     fastqc ${meta.id}_1.fastq.gz ${meta.id}_2.fastq.gz
     """
 }
