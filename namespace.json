@@ -1,1 +1,0 @@
-{"name": "default", "namespace_id": "default", "volumes": "{\n    \"/data\": {\n        \"bind\": \"/data\",\n        \"mode\": \"rw\"\n    }, \"/data2\": {\n        \"bind\": \"/data2\",\n        \"mode\": \"rw\"\n    }\n}"}
