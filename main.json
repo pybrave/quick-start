@@ -1,18 +1,1 @@
-{
-    "name": "test_name",
-    "components": {
-        "software": [
-            {
-                "name": "Quality Control",
-                "component_id":"6a92cdc0-054a-473a-9991-dce2d798afc1",
-				"category":"metagenomics"
-            }
-        ],"file": [
-            {
-                "name": "metaphlan file",
-                "component_id":"aae37f08-1dba-4b11-9511-97ceb0be19fe",
-				"category":"metagenomics"
-            }
-        ]
-    }
-}
+{"name": "test_name", "components": {"software": [{"name": "Quality Control", "component_id": "6a92cdc0-054a-473a-9991-dce2d798afc1", "category": "metagenomics"}], "file": [{"name": "metaphlan file", "component_id": "aae37f08-1dba-4b11-9511-97ceb0be19fe", "category": "metagenomics"}], "script": [{"name": "metaphlan\u4e30\u5ea6\u6587\u4ef6", "component_id": "a2ee27fd-2286-4594-8c11-94098d1ee738", "category": "default"}]}}
