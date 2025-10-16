@@ -1,0 +1,11 @@
+{
+    "name": "test_name",
+    "components": {
+        "software": [
+            {
+                "name": "Quality Control",
+                "component_id":"6a92cdc0-054a-473a-9991-dce2d798afc1"
+            }
+        ]
+    }
+}
