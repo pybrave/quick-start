@@ -34,8 +34,8 @@ if(T){
 
 
 data <- fromJSON(params_path)
-control_name <- ifelse(!is.na(data$re_groups_name$control),data$re_groups_name$control,data$groups_name$control)
-treatment_name <- ifelse(!is.na(data$re_groups_name$treatment),data$re_groups_name$treatment,data$groups_name$treatment)
+control_name <- ifelse(data$re_groups_name$control!="-",data$re_groups_name$control,data$groups_name$control)
+treatment_name <- ifelse(data$re_groups_name$treatment!="-",data$re_groups_name$treatment,data$groups_name$treatment)
 
 control <- data$control |>
   mutate(select_group=control_name )
@@ -186,7 +186,7 @@ ggplot(pcoa_df, aes(x=PC1, y=PC2, color=Group, fill=Group)) +
     
   ) +
   labs(
-    title = "PCoA of species",
+    title = str_glue("PCoA of {rank}"),
     x = "PCo 1 (29.76%)",
     y = "PCo 2 (17.11%)",
     # caption = paste("PERMANOVA: p-value =", permanova_p)
