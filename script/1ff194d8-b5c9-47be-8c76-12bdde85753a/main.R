@@ -40,7 +40,7 @@ fastp_df <- fastp_df %>%
     across(contains("bases"), round, 3),
     across(contains("rate"), round, 3),
     across(contains("gc"), round, 3)
-  ) |>
+  ) 
 
 write_tsv(fastp_df,file = str_glue("output/statistic.tsv"))
 
@@ -109,3 +109,4 @@ ggplot(fastp_df_plot, aes(x = stage, y = value, fill = stage)) +
   labs(title = "Fastp Summary Metrics by Stage", y = "Value") 
   # theme_minimal(base_size = 13)
 ggsave(filename = str_glue("output/summary_metrics.png"))
+

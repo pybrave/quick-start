@@ -26,14 +26,14 @@ df_annotations <- read_tsv(annotations,comment  = "##") |>
 dim(df_annotations)
 dim(df_exp)
 df_exp_anno <- df_exp |>
-  left_join(select(df_annotations,"feature",name = "Preferred_name"),by="feature") |>
-  relocate(name,.after = "feature")
+  left_join(select(df_annotations,"feature",name = "Preferred_name",KO="KEGG_ko",GO="GOs",pathway="KEGG_Pathway"),by="feature") |>
+  relocate(c(name,KO,pathway,GO),.after = "feature")
 
 write_tsv(df_exp_anno,"output/count.tsv")
 
 
-df_annotations |>
-  select(feature,name = "Preferred_name",KEGG_ko ) |>
-  write_tsv("output/count_anno.tsv")
+# df_annotations |>
+#   select(feature,name = "Preferred_name",KEGG_ko ) |>
+#   write_tsv("output/count_anno.tsv")
 
 # write_tsv(df_exp_anno,"output/count2.tsv")
